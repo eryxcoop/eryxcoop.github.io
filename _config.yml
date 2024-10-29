@@ -36,6 +36,11 @@ plugins:
 minima:
   skin: dark # or auto if you want it to switch with your system settings.
 
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
 #plugins:
 #  - jekyll-feed
 
