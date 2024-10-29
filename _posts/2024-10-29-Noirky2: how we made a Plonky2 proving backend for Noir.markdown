@@ -8,7 +8,7 @@ Before I start, I need to say that most things we did are specific to the Plonky
 
 Let's start by talking about the Noir workflow. In the following image you can see a simplified representation of the steps taking place from the written Noir program to the generation of the proofs.
 
-![noir_workflow.jpg](..%2Fassets%2Fimg%2Fnoir_workflow.jpg)
+![noir_workflow.jpg](/assets/img/noir_workflow.jpg)
 
 The steps are the following (you can check out the map on each step so you don't lose track):
 
@@ -38,7 +38,7 @@ The opcode types are *AssertZero*, *MemoryInit*, *MemoryOp* (read or write), *Br
 
 In an ACIR we have the concept of Witness. We can think of a Witness as an inmutable variable in the circuit. All the opcodes operate over these witnesses, and they are numbered from 0 to N. Here you can see an example fragment of an ACIR: the opcodes are presented as boxes, the high-level operations this representation provides, and the witness are presented as arrows that are inputs and outputs of this boxes.
 
-![ACIR_example.jpg](..%2Fassets%2Fimg%2FACIR_example.jpg)
+![ACIR_example.jpg](/assets/img/ACIR_example.jpg){: .example-acir-image }
 
 On the other hand, moving to our example backend, Plonky2 circuits operate over the concept of Targets and Gates (which at some level of abstraction are similar to Witnesses and Opcodes in ACIR respectively). Throughout the construction of the Plonky2 circuit we'll need a mapping between Witnesses and some Targets, more specifically we'll need an injective function $F: Witness \rightarrow Target$. Why? Because two different opcodes can refer to the same witness, and in those cases we'll want to refer to the same targets while we're building the circuit. Besides, to generate the Plonky2 proof we need to provide some concrete values to the input targets. The goal here is to build a Plonky2 circuit equivalent to the ACIR provided, while keeping enough information to assign concrete values taken from the Witness Stack to the input targets of the Plonky2 circuit.
 
@@ -115,10 +115,15 @@ There are many things to consider when building a prover backend for Noir. We sc
 ## External references for deep diving into the topic
 
 [Noir documentation](https://noir-lang.org/docs)
+
 [Plonky2 original paper](https://docs.rs/crate/plonky2/latest/source/plonky2.pdf)
+
 [ACIR specification in Noir repository](https://github.com/noir-lang/noir/tree/a87c655c6c8c077c71e3372cc9181b7870348a3d/acvm-repo/acir)
+
 [Noirky2 repository](https://github.com/eryxcoop/acvm-backend-plonky2)
+
 [Noirky2 repository documentation](https://eryxcoop.github.io/acvm-backend-plonky2/opcodes/foreword.html)
+
 [Noir source code](https://github.com/noir-lang/noir)
 
 
