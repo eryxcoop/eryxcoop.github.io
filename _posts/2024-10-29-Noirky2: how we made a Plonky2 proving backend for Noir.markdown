@@ -1,8 +1,6 @@
 ---
 layout: post
 title:  "Noirky2: how we made a Plonky2 proving backend for Noir"
-date:   2024-10-29
-categories: [Noir, ZK, Plonky2, SNARK, STARK] 
 image: "assets/img/vaporwave_header.webp"
 ---
 

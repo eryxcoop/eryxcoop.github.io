@@ -203,7 +203,9 @@
 }
 
 .post-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   @include relative-font-size(1.5);
 }
 
