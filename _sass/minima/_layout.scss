@@ -202,11 +202,17 @@
   color: $grey-color;
 }
 
+.post-image{
+  width: 350px;
+  height: auto;
+}
+
 .post-link {
   display: flex;
   flex-direction: column;
   gap: 10px;
   @include relative-font-size(1.5);
+  max-width: 400px;
 }
 
 

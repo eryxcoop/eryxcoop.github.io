@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Noirky2: how we made a Plonky2 proving backend for Noir"
-image: "assets/img/vaporwave_header.webp"
+image: "assets/img/Noirky2_logo.webp"
 ---
 
 ![vaporwave_header.webp](/assets/img/vaporwave_header.webp)
