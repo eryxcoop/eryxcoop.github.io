@@ -1,5 +1,3 @@
-# Noirky2: a technical Overview on how to make a custom proving backend for Noir
-
 This post is meant for curious developers that want to dive a bit deeper on how the Noir programming Language works, or alternatively want to adapt a new proving system to be used with Noir. Right now (october 2024) there are implementations for the following [proving systems](https://github.com/noir-lang/awesome-noir?tab=readme-ov-file#proving-backends) although some of them need to be updated: Barretenberg, Plonky2, Halo2, Groth16, Marlin, Nova and HyperNova.
 
 In [Eryx](https://eryx.co/) we made a Plonky2 backend called **Noirky2**. Now, there are so many things we wish we had known from the start. Besides, a lot changed in Noir structurally in the process and that's why so many backends need updating: the specification changed recently.
