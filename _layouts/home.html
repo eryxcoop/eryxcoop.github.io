@@ -20,7 +20,7 @@ layout: default
         <a class="post-link" href="{{ post.url | relative_url }}">
           <img class="post-image"src="{{ post.image }}" alt="Image not available">
           <div class="post-presentation-data">
-            {{ post.title | escape }}
+            <p class="title">{{ post.title | escape }}</p>
             <span class="post-meta">{{ post.date | date: date_format }}</span>
           </div>
         </a>

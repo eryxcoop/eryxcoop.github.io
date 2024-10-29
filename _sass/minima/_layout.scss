@@ -217,7 +217,7 @@
 .post-link {
   display: flex;
 
-  gap: 10px;
+  gap: 20px;
   @include relative-font-size(1.5);
 }
 
@@ -227,7 +227,11 @@
   gap: 10px;
 }
 
-
+.title {
+  color: black;
+  font-size: 1em;
+  text-align: left;
+}
 
 /**
  * Posts
