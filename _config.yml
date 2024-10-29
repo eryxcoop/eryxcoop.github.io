@@ -28,7 +28,7 @@ twitter_username: eryxcoop
 github_username:  eryxcoop
 
 # Build settings
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
 minima:
@@ -39,6 +39,10 @@ defaults:
       path: "assets/img"
     values:
       image: true
+
+sass:
+  sass_dir: _sass
+
 #plugins:
 #  - jekyll-feed
 
