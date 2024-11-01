@@ -2,6 +2,7 @@
 layout: post
 title:  "My path through FHE"
 image: "assets/img/fhe_header.webp"
+author: Bruno Weisz
 ---
 
 ![FHE_header.webp](/assets/img/fhe_header.webp)
