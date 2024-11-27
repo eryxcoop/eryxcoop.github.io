@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Power of GPU Parallelization (Applied to Cryptography Primitives)"
-image: "assets/img/power-of-gpu-parallelization.webp"
+image: "assets/img/power-of-gpu-parallelization/power-of-gpu-parallelization.webp"
 author: Julian Arnesino
 ---
 

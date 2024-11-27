@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Parallel Programming with CUDA"
-image: "assets/img/nvidia-cuda.jpeg"
+image: "assets/img/parallel-programming-cuda/nvidia-cuda.jpeg"
 author: Julian Arnesino
 ---
 
