@@ -186,6 +186,7 @@ This is easy to assume since we can always pad the array until it reaches the ne
 This version of the algorithm computes accumulated products in a binary tree shape.
 
 <p style="text-align: center">
+<img src="/assets/img/power-of-gpu-parallelization-accumulated-products-tree.png" alt="accumulated-products-tree" width=700 />
 
 $$a_1 \space\space\space\space\space\space\space\space\space\space\space\space a_2 \space\space\space\space\space\space\space\space\space\space\space\space a_3 \space\space\space\space\space\space\space\space\space\space\space\space a_4$$
 
@@ -227,6 +228,7 @@ $$= \frac{1}{a_1 \times a_2}$$
 Then, we continue pulling apart the rest of the products.
 
 <p style="text-align: center">
+<img src="/assets/img/power-of-gpu-parallelization-element-inversion-tree.png" alt="accumulated-products-tree" width=700 />
 
 $$\beta_{1,4}^{-1} \leftarrow eea(\beta_{1,4})$$
 
