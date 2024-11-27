@@ -21,7 +21,8 @@ They have three main applications:
 
 The third one, of course, is the original purpose for GPUs.
 
-How do GPUs parallelize? In this article, we will talk about CUDA, Nvidia's architecture.
+How do GPUs parallelize?
+In this article, we'll focus on CUDA, Nvidia's architecture for GPU computing.
 GPUs parallelize by splitting our program's computation between threads.
 The GPU will run these threads concurrently and process as many in parallel as it can.
 
