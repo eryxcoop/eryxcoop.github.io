@@ -186,7 +186,7 @@ This is easy to assume since we can always pad the array until it reaches the ne
 This version of the algorithm computes accumulated products in a binary tree shape.
 
 <p style="text-align: center">
-<img src="/assets/img/power-of-gpu-parallelization-accumulated-products-tree.png" alt="accumulated-products-tree" width=700 />
+<img src="/assets/img/power-of-gpu-parallelization/power-of-gpu-parallelization-accumulated-products-tree.png" alt="accumulated-products-tree" width=700 />
 
 $$a_1 \space\space\space\space\space\space\space\space\space\space\space\space a_2 \space\space\space\space\space\space\space\space\space\space\space\space a_3 \space\space\space\space\space\space\space\space\space\space\space\space a_4$$
 
@@ -228,7 +228,7 @@ $$= \frac{1}{a_1 \times a_2}$$
 Then, we continue pulling apart the rest of the products.
 
 <p style="text-align: center">
-<img src="/assets/img/power-of-gpu-parallelization-element-inversion-tree.png" alt="accumulated-products-tree" width=700 />
+<img src="/assets/img/power-of-gpu-parallelization/power-of-gpu-parallelization-element-inversion-tree.png" alt="accumulated-products-tree" width=700 />
 
 $$\beta_{1,4}^{-1} \leftarrow eea(\beta_{1,4})$$
 
@@ -255,7 +255,7 @@ Well, for an array with $n$ elements:
 Even while being equal in terms of time complexity, the use of GPU to parallelize the adapted trick clearly makes a difference.
 
 <p style="text-align: center">
-<img src="/assets/img/power-of-gpu-parallelization-bar-graph.png" alt="GPU vs CPU + AVX" width=700 />
+<img src="/assets/img/power-of-gpu-parallelization/power-of-gpu-parallelization-bar-graph.png" alt="GPU vs CPU + AVX" width=700 />
 </p>
 
 And the difference is ridiculous.
@@ -264,7 +264,7 @@ Even when comparing against an AVX-optimized CPU algorithm (AVX being a single-i
 The next chart shows how this difference scales proportionally to the amount of elements involved.
 
 <p style="text-align: center">
-<img src="/assets/img/power-of-gpu-parallelization-line-graph.png" alt="GPU vs CPU + AVX for different array sizes" width=700 />
+<img src="/assets/img/power-of-gpu-parallelization/power-of-gpu-parallelization-line-graph.png" alt="GPU vs CPU + AVX for different array sizes" width=700 />
 </p>
 
 The following graph depicts the time taken for the Stwo prover to compute a proof.
@@ -272,7 +272,7 @@ Stwo is a Circle STARKs prover self-described as the fastest at the time of writ
 The times shown are for the accumulated proving time of CPU with AVX against GPU for the different stages of the proving algorithm.
 
 <p style="text-align: center">
-<img src="/assets/img/power-of-gpu-parallelization-stwo-line-graph.png" alt="GPU vs CPU + AVX for the Stwo prover" width=700 />
+<img src="/assets/img/power-of-gpu-parallelization/power-of-gpu-parallelization-stwo-line-graph.png" alt="GPU vs CPU + AVX for the Stwo prover" width=700 />
 </p>
 
 Once again, the difference is made more than clear.
