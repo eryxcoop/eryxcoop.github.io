@@ -9,7 +9,7 @@ author: Julian Arnesino
 
 We discuss the basics of GPU parallelization and how it's used in applied cryptography.
 Then, we describe a case study, which helps us see how a real algorithm is adapted for its parallelization.
-Finally, we compare results, concluding in a successful application of GPU parallelization.
+Finally, we compare results, concluding with a successful application of GPU parallelization.
 
 ## Introduction
 
@@ -19,26 +19,26 @@ They have three main applications:
 2. Complex algebraic operations.
 3. Image or signal processing.
 
-The third one, of course, being the original purpose for GPUs.
+The third one, of course, is the original purpose for GPUs.
 
-How do GPUs parallelize? We will talk about CUDA, Nvidia's architecture, in this article.
+How do GPUs parallelize? In this article, we will talk about CUDA, Nvidia's architecture.
 GPUs parallelize by splitting our program's computation between threads.
-These threads will be run concurrently by the GPU, and the GPU will process as many in parallel as it can.
+The GPU will run these threads concurrently and process as many in parallel as it can.
 
 There are many architecture-specific features to help us, too.
-- The way threads are grouped in blocks and warps, and how they interact.
-- The use of different memory types. 
+- How threads are grouped in blocks and warps, and how they interact.
+- The use of different memory types.
 - Consecutive memory access operations.
 - Locks and atomic operations.
 
 All this power, however, does not come without its share of responsibility.
-There are a few things one must take into account when programming for GPUs.
+There are several factors to consider when programming for GPUs.
 1. The GPU and CPU have separate memory spaces.
-   1. One cannot access the other's memory.
-   2. Copying data from one to the other is very expensive.
+    1. One cannot access the other's memory.
+    2. Copying data from one to the other is very expensive.
 2. Memory accessing is not trivial.
-   1. GPU algorithms shine when memory access is consecutive, coalesced.
-   2. The application of memory optimizations usually depend on consecutive accessing.
+    1. GPU algorithms shine when memory access is consecutive, and coalesced.
+    2. The application of memory optimizations usually depends on consecutive access.
 
 Now, the sudden rise in practical applications for cryptography theory concepts in recent years caused some to research and develop specialized hardware.
 As of the writing of this article, the research of zero-knowledge and cryptography hardware resulted in and is focused on FPGAs and ASICs.
@@ -57,7 +57,7 @@ Its purpose is to calculate the multiplicative inverse in the field for a batch 
 ### Sequential algorithm (Montgomery's trick)
 
 In a naïve approach, one would invert each element in the array.
-This would mean applying the extended euclidean algorithm for each element to compute its inverse. 
+This would mean applying the extended Euclidean algorithm for each element to compute its inverse.
 However, since field inversion is an expensive operation, we will use something called _Montgomery’s trick_.
 
 It starts with an array of elements to invert.
@@ -80,7 +80,7 @@ $$\beta_3 = a_1 \times a_2 \times a_3$$
 $$\beta_4 = a_1 \times a_2 \times a_3 \times a_4$$
 </p>
 
-Which could be done with only as many products as there are elements in the array.
+This could be done with as many products as there are elements in the array.
 
 <p style="text-align: center">
 
@@ -93,7 +93,7 @@ $$\beta_3 = \beta_2 \times a_3$$
 $$\beta_4 = \beta_3 \times a_4$$
 </p>
 
-In the next step, we compute the field inversion for the final accumulated product, using the extended euclidean algorithm.
+In the next step, we compute the field inversion for the final accumulated product, using the extended Euclidean algorithm.
 
 <p style="text-align: center">
 
@@ -103,7 +103,7 @@ $$\beta_4^{-1} \leftarrow eea(\beta_4)$$
 This will be the only time we use this expensive operation.
 
 Now, we want to calculate the inversion of each element from the inversion of the final accumulated product.
-The trick uses the previous accumulated products for this, like so.
+The trick uses the previously accumulated products for this, as follows.
 
 <p style="text-align: center">
 
@@ -123,7 +123,7 @@ $$= \frac{1}{a_4}$$
 </p>
 
 The inversion of the accumulated product contains the inversions of all the elements accumulated.
-By multiplying it with the elements we don't want, those inversions are cancelled out, and we are left with just the one we want.
+By multiplying it with the elements we don't want, those inversions are canceled out, and only the element we want remains.
 
 Now it can calculate the inversion of the previous accumulated product.
 
@@ -158,15 +158,15 @@ But why have we done all this?
 Well, for an array with $n$ elements:
 - A naïve implementation would need $n$ field inversions.
 - Montgomery's trick needs $3 (n - 1)$ field multiplications and only one field inversion.
-  - Needs $n - 1$ multiplications to compute the accumulated products.
-  - Needs one field inversion for the final accumulated product.
-  - Needs $2 (n - 1)$ multiplications to invert each element.
+    - Needs $n - 1$ multiplications to compute the accumulated products.
+    - Needs one field inversion for the final accumulated product.
+    - Needs $2 (n - 1)$ multiplications to invert each element.
 
-Knowing how expensive the extended euclidean algorithm is, we will gladly take the trade.
+Knowing how expensive the extended Euclidean algorithm is, we will gladly take the trade.
 
 However, this algorithm cannot be parallelized as is.
 Calculating each accumulated product needs the previous one.
-And calculating each element inversion needs the previous inverted accumulated product.
+Even calculating each element inversion needs the previous inverted accumulated product.
 
 So we will adapt the algorithm for its parallelization.
 
@@ -180,7 +180,7 @@ $$a_1, a_2, a_3, a_4 \in \mathbb{F}_p$$
 </p>
 
 But we'll assume the length of the array is a power of two.
-This is easy to assume, since we can always pad the array until it reaches the next power of two, and then discard the padded values in the end.
+This is easy to assume since we can always pad the array until it reaches the next power of two, and then discard the padded values in the end.
 
 This version of the algorithm computes accumulated products in a binary tree shape.
 
@@ -196,7 +196,7 @@ $$\beta_{1,4} = \beta_{1,2} \times \beta_{3,4}$$
 Observe that, in the same level of the tree, all multiplications are independent.
 Therefore, they can be parallelized.
 
-In the next step, we compute the field inversion for the final accumulated product, using the extended euclidean algorithm.
+In the next step, we compute the field inversion for the final accumulated product, using the extended Euclidean algorithm.
 
 <p style="text-align: center">
 
@@ -205,7 +205,7 @@ $$\beta_{1,4}^{-1} \leftarrow eea(\beta_{1,4})$$
 
 This will be the only time we use this expensive operation.
 
-And, just like before, we can use the previous accumulated products to pull apart the components our inverted accumulated product.
+And, just like before, we can use the previous accumulated products to pull apart the components of our inverted accumulated product.
 
 <p style="text-align: center">
 
@@ -223,7 +223,7 @@ $$\approx \frac{1}{a_1 \times a_2 \times a_3 \times a_4} \times a_2 \times a_3$$
 $$= \frac{1}{a_1 \times a_2}$$
 </p>
 
-Again and for the last time, this is only intuitively, since there is no such thing as division in $\mathbb{F}_p$. 
+Again and for the last time, this is only intuitively, since there is no such thing as division in $\mathbb{F}_p$.
 
 <p style="text-align: center">
 
@@ -234,7 +234,7 @@ $$\beta_{1,2}^{-1} = \beta_{1,4}^{-1} \times \beta_{3,4} \space\space\space\spac
 $$a_1^{-1} = \beta_{1,2}^{-1} \times a_2 \space\space\space\space a_2^{-1} = \beta_{1,2}^{-1} \times a_1 \space\space\space\space a_3^{-1} = \beta_{3,4}^{-1} \times a_4 \space\space\space\space a_4^{-1} = \beta_{3,4}^{-1} \times a_3$$
 </p>
 
-In this tree it is also true that each operation in the same level can be parallelized. 
+In this tree, it is also true that each operation in the same level can be parallelized.
 
 This leaves us with every element's inversion.
 
@@ -245,11 +245,11 @@ Well, for an array with $n$ elements:
     - Needs $n - 1$ multiplications to compute the accumulated products.
     - Needs one field inversion for the final accumulated product.
     - Needs $2 (n - 1)$ multiplications to invert each element.
-So their time complexity is the same.
+      So their time complexity is the same.
 
 ### Performance comparison
 
-Even while being equals in terms of time complexity, the use of GPU to parallelize the adapted trick clearly makes a difference.
+Even while being equal in terms of time complexity, the use of GPU to parallelize the adapted trick clearly makes a difference.
 
 <p style="text-align: center">
 <img src="/assets/img/power-of-gpu-parallelization-bar-graph.png" alt="GPU vs CPU + AVX" width=700 />
@@ -258,14 +258,14 @@ Even while being equals in terms of time complexity, the use of GPU to paralleli
 And the difference is ridiculous.
 Even when comparing against an AVX-optimized CPU algorithm (AVX being a single-instruction-multiple-data architecture).
 
-And the next chart shows how this difference scales proportionally to the amount of elements involved.
+The next chart shows how this difference scales proportionally to the amount of elements involved.
 
 <p style="text-align: center">
 <img src="/assets/img/power-of-gpu-parallelization-line-graph.png" alt="GPU vs CPU + AVX for different array sizes" width=700 />
 </p>
 
 The following graph depicts the time taken for the Stwo prover to compute a proof.
-Stwo is a Circle Starks prover which can call itself the fastest at the time of writing.
+Stwo is a Circle Starks prover that can call itself the fastest at the time of writing.
 The times shown are for the accumulated proving time of CPU with AVX against GPU.
 
 <p style="text-align: center">
@@ -283,5 +283,3 @@ The main takeaways from all this are the following.
    Harnessing GPU power is nowadays vital for the computation of cryptography primitives.
 2. A simple heuristic goes a long way in harnessing the power of both high-performance and commodity hardware GPUs.
    In most cases, a parallelization would consist of implementing a loop with threads. Which would not require any adaptations, like the one shown here.  
-
-
