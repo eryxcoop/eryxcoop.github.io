@@ -61,43 +61,87 @@ This would mean applying the extended euclidean algorithm for each element to co
 However, since field inversion is an expensive operation, we will use something called _Montgomery’s trick_.
 
 It starts with an array of elements to invert.
+
+<p style="text-align: center">
+
 $$a_1, a_2, a_3, a_4 \in \mathbb{F}_p$$
+</p>
 
 It then computes the accumulated products up to each element.
+
+<p style="text-align: center">
+
 $$\beta_1 = a_1$$
+
 $$\beta_2 = a_1 \times a_2$$
+
 $$\beta_3 = a_1 \times a_2 \times a_3$$
+
 $$\beta_4 = a_1 \times a_2 \times a_3 \times a_4$$
+</p>
 
 Which could be done with only as many products as there are elements in the array.
+
+<p style="text-align: center">
+
 $$\beta_1 = a_1$$
+
 $$\beta_2 = \beta_1 \times a_2$$
+
 $$\beta_3 = \beta_2 \times a_3$$
+
 $$\beta_4 = \beta_3 \times a_4$$
+</p>
 
 In the next step, we compute the field inversion for the final accumulated product, using the extended euclidean algorithm.
+
+<p style="text-align: center">
+
 $$\beta_4^{-1} \leftarrow eea(\beta_4)$$
+</p>
+
 This will be the only time we use this expensive operation.
 
 Now, we want to calculate the inversion of each element from the inversion of the final accumulated product.
 The trick uses the previous accumulated products for this, like so.
+
+<p style="text-align: center">
+
 $$a_4^{-1} = \beta_4^{-1} \times \beta_3$$
+</p>
 
 How does that work? Well, we could explain it by imagining the field inversion as a division.
 This is an intuitive representation only, since there is no such thing as division in $\mathbb{F}_p$.
+
+<p style="text-align: center">
+
 $$a_4^{-1} = \beta_4^{-1} \times \beta_3$$
+
 $$\approx \frac{1}{a_1 \times a_2 \times a_3 \times a_4} \times a_1 \times a_2 \times a_3$$
+
 $$= \frac{1}{a_4}$$
+</p>
+
 The inversion of the accumulated product contains the inversions of all the elements accumulated.
 By multiplying it with the elements we don't want, those inversions are cancelled out, and we are left with just the one we want.
 
 Now it can calculate the inversion of the previous accumulated product.
+
+<p style="text-align: center">
+
 $$\beta_3^{-1} = \beta_4^{-1} \times a_4$$
+</p>
 
 The same intuition applies.
+
+<p style="text-align: center">
+
 $$\beta_3^{-1} = \beta_4^{-1} \times a_4$$
+
 $$\approx \frac{1}{a_1 \times a_2 \times a_3 \times a_4} \times a_4$$
+
 $$= \frac{1}{a_1 \times a_2 \times a_3}$$
+</p>
 
 This idea would now be sequentially repeated for the remaining elements in the array.
 
@@ -129,34 +173,66 @@ So we will adapt the algorithm for its parallelization.
 ### Parallel algorithm (adapted Montgomery's trick)
 
 It starts with an array of elements to invert.
+
+<p style="text-align: center">
+
 $$a_1, a_2, a_3, a_4 \in \mathbb{F}_p$$
+</p>
+
 But we'll assume the length of the array is a power of two.
 This is easy to assume, since we can always pad the array until it reaches the next power of two, and then discard the padded values in the end.
 
 This version of the algorithm computes accumulated products in a binary tree shape.
+
+<p style="text-align: center">
+
 $$a_1 \space\space\space\space\space\space\space\space\space\space\space\space a_2 \space\space\space\space\space\space\space\space\space\space\space\space a_3 \space\space\space\space\space\space\space\space\space\space\space\space a_4$$
+
 $$\beta_{1,2} = a_1 \times a_2 \space\space\space\space\space\space \beta_{3,4} = a_3 \times a_4$$
+
 $$\beta_{1,4} = \beta_{1,2} \times \beta_{3,4}$$
+</p>
 
 Observe that, in the same level of the tree, all multiplications are independent.
 Therefore, they can be parallelized.
 
 In the next step, we compute the field inversion for the final accumulated product, using the extended euclidean algorithm.
+
+<p style="text-align: center">
+
 $$\beta_{1,4}^{-1} \leftarrow eea(\beta_{1,4})$$
+</p>
+
 This will be the only time we use this expensive operation.
 
 And, just like before, we can use the previous accumulated products to pull apart the components our inverted accumulated product.
+
+<p style="text-align: center">
+
 $$\beta_{1,2}^{-1} = \beta_{1,4}^{-1} \times \beta_{3,4}$$
+</p>
 
 Once again, we apply the same intuition used for the sequential implementation.
+
+<p style="text-align: center">
+
 $$\beta_{1,2}^{-1} = \beta_{1,4}^{-1} \times \beta_{3,4}$$
+
 $$\approx \frac{1}{a_1 \times a_2 \times a_3 \times a_4} \times a_2 \times a_3$$
+
 $$= \frac{1}{a_1 \times a_2}$$
+</p>
+
 Again and for the last time, this is only intuitively, since there is no such thing as division in $\mathbb{F}_p$. 
 
+<p style="text-align: center">
+
 $$\beta_{1,4}^{-1} \leftarrow eea(\beta_{1,4})$$
+
 $$\beta_{1,2}^{-1} = \beta_{1,4}^{-1} \times \beta_{3,4} \space\space\space\space\space\space \beta_{3,4}^{-1} = \beta_{1,4}^{-1} \times \beta_{1,2}$$
+
 $$a_1^{-1} = \beta_{1,2}^{-1} \times a_2 \space\space\space\space a_2^{-1} = \beta_{1,2}^{-1} \times a_1 \space\space\space\space a_3^{-1} = \beta_{3,4}^{-1} \times a_4 \space\space\space\space a_4^{-1} = \beta_{3,4}^{-1} \times a_3$$
+</p>
 
 In this tree it is also true that each operation in the same level can be parallelized. 
 
