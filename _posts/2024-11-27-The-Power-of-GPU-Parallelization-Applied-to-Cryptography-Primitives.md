@@ -123,7 +123,7 @@ $$\approx \frac{1}{a_1 \times a_2 \times a_3 \times a_4} \times a_1 \times a_2 \
 $$= \frac{1}{a_4}$$
 </p>
 
-The inversion of the accumulated product contains the inversions of all the elements accumulated.
+The inversion of the accumulated product is equal to the product of all the individual inverses.
 By multiplying it with the elements we don't want, those inversions are canceled out, and only the element we want remains.
 
 Now it can calculate the inversion of the previous accumulated product.
@@ -133,7 +133,7 @@ Now it can calculate the inversion of the previous accumulated product.
 $$\beta_3^{-1} = \beta_4^{-1} \times a_4$$
 </p>
 
-The same intuition applies.
+The same idea applies.
 
 <p style="text-align: center">
 
@@ -268,8 +268,8 @@ The next chart shows how this difference scales proportionally to the amount of 
 </p>
 
 The following graph depicts the time taken for the Stwo prover to compute a proof.
-Stwo is a Circle Starks prover that can call itself the fastest at the time of writing.
-The times shown are for the accumulated proving time of CPU with AVX against GPU.
+Stwo is a Circle STARKs prover self-described as the fastest at the time of writing.
+The times shown are for the accumulated proving time of CPU with AVX against GPU for the different stages of the proving algorithm.
 
 <p style="text-align: center">
 <img src="/assets/img/power-of-gpu-parallelization-stwo-line-graph.png" alt="GPU vs CPU + AVX for the Stwo prover" width=700 />
@@ -277,7 +277,7 @@ The times shown are for the accumulated proving time of CPU with AVX against GPU
 
 Once again, the difference is made more than clear.
 Stwo is made for proving traces of programs.
-These benchmarks were not run for a real trace, but for a simulated one, using an adaptation of the Fibonacci sequence.
+These benchmarks were not run for a real trace, but for a simulated one, using a variant of the Fibonacci sequence.
 
 ## Conclusions
 
