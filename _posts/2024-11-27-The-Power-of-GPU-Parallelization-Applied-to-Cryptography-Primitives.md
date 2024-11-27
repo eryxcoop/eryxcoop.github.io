@@ -224,7 +224,7 @@ $$\approx \frac{1}{a_1 \times a_2 \times a_3 \times a_4} \times a_2 \times a_3$$
 $$= \frac{1}{a_1 \times a_2}$$
 </p>
 
-Again and for the last time, this is only intuitively, since there is no such thing as division in $\mathbb{F}_p$.
+Then, we continue pulling apart the rest of the products.
 
 <p style="text-align: center">
 
