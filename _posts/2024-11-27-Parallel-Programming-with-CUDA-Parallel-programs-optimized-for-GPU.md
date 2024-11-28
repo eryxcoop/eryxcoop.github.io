@@ -26,11 +26,6 @@ It is applied in many fields and industries. These are some examples from [Nvidi
 - Healthcare
 - Financial Services
 - Aerospace
-- Automotive and Transportation
-- Manufacturing
-- Media and Entertainment
-- Retail
-- Smart Spaces
 
 In particular, we use it in [Stwo](https://github.com/starkware-libs/stwo)'s [GPU implementation](https://github.com/nethermindeth/stwo-gpu), a Circle STARKs prover for program traces claiming to be the fastest one at the time of writing.
 
