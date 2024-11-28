@@ -89,10 +89,10 @@ The following is a way of running a simple kernel.
 
 There are several types of memory in the GPU.
 - Global memory.
-  - Common memory available in the GPU.
-  - Must be allocated.
-  - Commonly known as VRAM.
-  - Can only be accessed from methods running in the GPU.
+  - It is the common memory available in the GPU.
+  - It must be allocated.
+  - It is commonly known as VRAM.
+  - It can only be accessed from methods running in the GPU.
   - Its addresses are only valid for the GPU.
 
 <p style="text-align: center">
