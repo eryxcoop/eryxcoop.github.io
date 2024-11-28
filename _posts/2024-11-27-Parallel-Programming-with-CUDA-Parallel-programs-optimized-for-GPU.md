@@ -95,9 +95,10 @@ There are several types of memory in the GPU.
 </p>
 
 - Shared memory.
-  - Faster than Global memory, but more limited.
-  - Must be allocated when launching the kernel.
-  - Shared between threads in the same block.
+  - It is also available in the GPU.
+  - It also must be reserved, but only when launching the kernel, and without allocating a specific size.
+  - It is faster than Global memory, but more limited.
+  - It is shared between threads in the same block.
 
 <p style="text-align: center">
 <img src="/assets/img/parallel-programming-cuda/shared-memory.png" alt="Shared memory" width=700 />
