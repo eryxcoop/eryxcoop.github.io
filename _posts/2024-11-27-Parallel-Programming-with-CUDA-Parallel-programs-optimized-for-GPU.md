@@ -22,7 +22,7 @@ Well, CUDA is both a framework and an architecture for parallel GPU programming.
 CUDA C++ is an extension of C/C++ for the programming of CUDA-architecture GPUs.
 
 What is CUDA used for?
-According to [Nvidia](https://www.nvidia.com/en-us/accelerated-applications/), it is broadly applied in the following industries.
+It is applied in many fields and industries. These are some examples from [Nvidia](https://www.nvidia.com/en-us/accelerated-applications/).
 - Healthcare
 - Financial Services
 - Aerospace
@@ -32,7 +32,7 @@ According to [Nvidia](https://www.nvidia.com/en-us/accelerated-applications/), i
 - Retail
 - Smart Spaces
 
-It is also used in [Stwo](https://github.com/starkware-libs/stwo)'s [GPU implementation](https://github.com/nethermindeth/stwo-gpu), a Circle STARKs prover for program traces claiming to be the fastest one at the time of writing.
+In particular, we use it in [Stwo](https://github.com/starkware-libs/stwo)'s [GPU implementation](https://github.com/nethermindeth/stwo-gpu), a Circle STARKs prover for program traces claiming to be the fastest one at the time of writing.
 
 ### Threads, blocks, and warps
 
