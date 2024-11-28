@@ -397,13 +397,12 @@ Say the grid size is $G$.
 As soon as we load our data to shared memory in the block, we can make threads add all the elements outside the first G elements of the array.
 That way, when the blocks start working, we know we have an array of size G.
 
-This comes with two benefits:
-1. It can handle arrays bigger than the grid.
-  - The array is reduced to size G when loading the elements to shared memory.
-2. It provides maximum memory coalescing.
-   - We sum the array until it is reduced to size G by looping with a grid-stride. 
+This comes with three benefits:
+1. **It can handle arrays bigger than the grid.** The array is reduced to size G when loading the elements to shared memory.
+2. **It provides maximum memory coalescing.** We sum the array until it is reduced to size G by looping with a grid-stride. 
      Therefore, memory access between warps is unit-stride every time.
      This means all accesses from threads in the same warp are going to be in consecutive addresses.
+3. **It amortizes the of the creation and destruction of threads** that comes from launching more than the grid size. 
 
 The following is an implementation of that approach:
 
