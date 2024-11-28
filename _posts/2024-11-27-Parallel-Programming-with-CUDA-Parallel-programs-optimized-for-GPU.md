@@ -137,8 +137,9 @@ As each element is reached, it is summed to the total.
 
 ### The general idea behind a parallel reduction
 
-How would one parallelize a binary reduction?
+How would one parallelize the sum algorithm?
 Well, there is an idea, a pattern that will be repeated in, at least, most of the implementations we may think of.
+The idea is named _parallel reduction_.
 
 <p style="text-align: center">
 <img src="/assets/img/parallel-programming-cuda/binary-reduction-code.png" alt="Binary reduction code" width=1000 />
