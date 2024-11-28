@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Pairings intuition"
+image: "assets/img/pairings_intuition.webp"
+author: Sergio Chouhy
+---
+
 ![Piezas_Crypto-07](/assets/img/piezas_crypto_07.png)
 
 
