@@ -68,9 +68,8 @@ All threads in a warp share:
 - Execution time.
 - Cache (sometimes).
 
-We can launch a ridiculous number of blocks to run concurrently.
-However, the GPU will only run a certain number in parallel, forming what we call a _grid_.
-The size of the grid defines how many are executed in parallel.
+We can launch a ridiculous number of blocks to run concurrently, forming what we call a _grid_.
+However, the GPU will only run a certain number in parallel.
 
 <p style="text-align: center">
 <img src="/assets/img/parallel-programming-cuda/grid.png" alt="Grid" width=700 />
@@ -393,13 +392,23 @@ The comparison shows we managed to shave a little more time.
 
 ### Implementation 10 - Reduce data to grid size
 
-As explained previously, we can launch many concurrent threads, but not all of them will be run in parallel.
-The GPU has a limit to the amount of threads or blocks it can run at the same time.
-We said the blocks running in parallel are called a grid, and the grid size depends on the version of the CUDA architecture in the GPU.
+What if our problem size exceeds the amount of threads our CUDA device supports?
+What do we do about that?
+We can reduce our problem to be grid sized as soon as we begin parallelizing.
 
-CUDA gives us a way of knowing the grid size.
-What if, instead of launching concurrent threads and letting CUDA do the scheduling, we just launch a grid of blocks and sequentially reduce the array until our grid can parallelize it?
-The following is an implementation of that experiment:
+Say the grid size is $G$.
+As soon as we load our data to shared memory in the block, we can make threads add all the elements outside the first G elements of the array.
+That way, when the blocks start working, we know we have an array of size G.
+
+This comes with two benefits:
+1. It can handle arrays bigger than the grid.
+  - The array is reduced to size G when loading the elements to shared memory.
+2. It provides maximum memory coalescing.
+   - We sum the array until it is reduced to size G by looping with a grid-stride. 
+     Therefore, memory access between warps is unit-stride every time.
+     This means all accesses from threads in the same warp are going to be in consecutive addresses.
+
+The following is an implementation of that approach:
 
 <p style="text-align: center">
 <img src="/assets/img/parallel-programming-cuda/grid-size-reduction-code.png" alt="Grid size reduction code" width=1000 />
@@ -549,6 +558,7 @@ The main takeaways are:
 7. [Vector Types (2)](https://developer.nvidia.com/blog/cuda-pro-tip-increase-performance-with-vectorized-memory-access/)
 8. [Unified Memory](https://developer.nvidia.com/blog/unified-memory-cuda-beginners/)
 9. [Cooperative Groups](https://developer.nvidia.com/blog/cooperative-groups/)
+10. [Grid Stride Loops](https://developer.nvidia.com/blog/cuda-pro-tip-write-flexible-kernels-grid-stride-loops/)
 10. [CUDA Accelerated Applications](https://www.nvidia.com/en-us/accelerated-applications/)
 11. [Stwo](https://github.com/starkware-libs/stwo)
 12. [Stwo GPU](https://github.com/nethermindeth/stwo-gpu)
