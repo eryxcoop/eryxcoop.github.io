@@ -121,6 +121,8 @@ This becomes increasingly interesting as we scale the array to bigger sizes.
 <img src="/assets/img/parallel-programming-cuda/binary-reduction-signature-and-usage.png" alt="Binary reduction usage" width=700 />
 </p>
 
+In [this repository](https://github.com/jarnesino/cuda-reduction-optimization) you can find all the code and benchmarks we talk about here.
+
 ### Sequential implementation
 
 To start with, this is a sequential version one might choose to implement for the CPU.
