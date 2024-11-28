@@ -40,7 +40,7 @@ They will be launched in _blocks_, groups of a chosen number of threads.
 Just like we can choose how many threads make a block, we can also set the block to have one, two or three dimensions.
 Threads in the same block share:
 - A memory space apart from the global GPU memory.
-- Execution time.
+- Time of execution.
 - Cache (sometimes).
 
 <p style="text-align: center">
@@ -60,7 +60,7 @@ They are smaller than blocks, usually consisting of 32 threads.
 All threads in a warp share:
 - Program counter.
 - Register space.
-- Execution time.
+- Time of execution.
 - Cache (sometimes).
 
 We can launch a ridiculous number of blocks to run concurrently, forming what we call a _grid_.
