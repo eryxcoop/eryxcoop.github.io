@@ -78,3 +78,5 @@ We've sketched an idea of why a function $e$ such that $e(aP, bQ) = a\cdot b\cdo
 
 But on the other hand, pairings have a similar property, namely $e(aP, Q) = e(P, Q)^a$. So this suggests a way to reduce discrete logarithms over elliptic curves to discrete logarithms over finite fields! This looks bad since over finite fields there are many more tools to crack it than over elliptic curves. There's an attack based on this fact called [the MOV attack](https://crypto.stanford.edu/pbc/notes/elliptic/movattack.html).
 It isn't as bad as it sounds. And that's because we've swiped a lot of details under the rug. For example, the value $e(P, Q)$ lives usually over an extension of the original field $\mathbb{F}_r$. Discrete log attacks over these extensions are less effective.
+
+So, don't panic kids, the MOV attack is not under the bed... at least for now.
