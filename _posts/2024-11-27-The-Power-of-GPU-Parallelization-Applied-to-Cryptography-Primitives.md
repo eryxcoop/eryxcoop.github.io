@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Power of GPU Parallelization (Applied to Cryptography Primitives)"
-image: "assets/img/entries_covers/ccc.png"
+image: "assets/img/entries_covers/power_of_gpu.png"
 author: Julian Arnesino
 introduction: "We discuss the basics of GPU parallelization and how it's used in applied cryptography.
 Then, we describe a case study, which helps us see how a real algorithm is adapted for its parallelization.

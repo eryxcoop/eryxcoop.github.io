@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Noirky2: how we made a Plonky2 proving backend for Noir"
-image: "assets/img/entries_covers/bbb.png"
+image: "assets/img/entries_covers/plonky2_backend.png"
 author: Bruno Weisz
 introduction: "This post is meant for curious developers who want to dive deeper into how the Noir programming Language works, or want to adapt a new proving system to be used with Noir. Right now (October 2024) there are implementations for the following proving systems although some of them need to be updated: Barretenberg, Plonky2, Halo2, Groth16, Marlin, Nova and HyperNova.<br></br>
 

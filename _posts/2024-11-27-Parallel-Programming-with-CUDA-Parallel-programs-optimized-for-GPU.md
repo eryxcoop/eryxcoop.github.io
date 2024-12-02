@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Parallel Programming with CUDA"
-image: "assets/img/entries_covers/ddd.png"
+image: "assets/img/entries_covers/parallel_programming.png"
 author: Julian Arnesino
 introduction: "In this article, we will talk about GPU parallelization with CUDA.
 Firstly, we introduce concepts and uses of the architecture.<br></br>
