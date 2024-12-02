@@ -1,15 +1,17 @@
 ---
 layout: post
 title:  "Noirky2: how we made a Plonky2 proving backend for Noir"
-image: "assets/img/Noirky2_logo.webp"
+image: "assets/img/entries_covers/bbb.png"
 author: Bruno Weisz
+introduction: "This post is meant for curious developers who want to dive deeper into how the Noir programming Language works, or want to adapt a new proving system to be used with Noir. Right now (October 2024) there are implementations for the following proving systems although some of them need to be updated: Barretenberg, Plonky2, Halo2, Groth16, Marlin, Nova and HyperNova.<br></br>
+
+In Eryx we made a Plonky2 backend called Noirky2. Now, there are so many things we wish we had known from the start..<br></br>
+
+Besides, a lot changed in Noir structurally in the process and that’s why so many backends need updating: the specification changed recently."
 ---
 
-![vaporwave_header.webp](/assets/img/vaporwave_header.webp)
 
-This post is meant for curious developers who want to dive deeper into how the Noir programming Language works, or want to adapt a new proving system to be used with Noir. Right now (October 2024) there are implementations for the following [proving systems](https://github.com/noir-lang/awesome-noir?tab=readme-ov-file#proving-backends) although some of them need to be updated: Barretenberg, Plonky2, Halo2, Groth16, Marlin, Nova and HyperNova.
-
-In [Eryx](https://eryx.co/) we made a Plonky2 backend called **Noirky2**. Now, there are so many things we wish we had known from the start. Besides, a lot changed in Noir structurally in the process and that's why so many backends need updating: the specification changed recently.
+### Introduction
 
 Before I start, I need to say that most of what we did is specific to the Plonky2 proving system, so it won't be useful when explaining how to do it in general. The idea is to extract abstract concepts and discuss the parts of the process that apply to every (or some) proving system.
 

@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<style>
+  .post-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+  }
+</style>
+
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
@@ -20,7 +28,7 @@ layout: default
         <a class="post-link" href="{{ post.url | relative_url }}">
           <img class="post-image"src="{{ post.image }}" alt="Image not available">
           <div class="post-presentation-data">
-            <p class="title">{{ post.title | escape }}</p>
+            <h5 class="title">{{ post.title | escape }}</h5>
             <span class="post-meta">{{ post.date | date: date_format }}</span>
           </div>
         </a>

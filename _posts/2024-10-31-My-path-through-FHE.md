@@ -1,14 +1,12 @@
 ---
 layout: post
 title:  "My path through FHE"
-image: "assets/img/fhe_header.webp"
+image: "assets/img/entries_covers/yyy.png"
 author: Bruno Weisz
+introduction: "When we hear the term 'programmable cryptography' we often think about Zero Knowledge Proofs (ZK) alone. Still, sometimes we forget about other areas like Multi-Party Computation (MPC) or Fully Homomorphic Encryption (FHE). <br></br> I recently started learning about FHE and wanted to give an overview, not about the subjects targeted by FHE (I will write another post about that) but about my path and all the resources that guided me throughout the process."
 ---
 
-![FHE_header.webp](/assets/img/fhe_header.webp)
-
-
-When we hear the term "programmable cryptography," we often think about Zero Knowledge Proofs (ZK) alone. Still, sometimes we forget about other areas like Multi-Party Computation (MPC) or Fully Homomorphic Encryption (FHE). I recently started learning about FHE and wanted to give an overview, not about the subjects targeted by FHE (I will write another post about that) but about my path and all the resources that guided me throughout the process.
+### Introduction
 
 First of all, what is FHE? The basic idea is to allow a third party, like a remote server, to perform computations over your data without giving the server access to it. To do so, we provide this third party with an encrypted version of our data so that it can perform encrypted operations. When the server is done with the computation, it returns the encrypted result, which is to be decrypted by the original owner of the data. Learning how this is all done is a challenge. For a slightly deeper overview, read the first paragraphs of this [Wikipedia article](https://en.wikipedia.org/wiki/Homomorphic_encryption) or part 1 of this [blog post](https://mirror.xyz/privacy-scaling-explorations.eth/D8UHFW1t48x2liWb5wuP6LDdCRbgUH_8vOFvA0tNDJA).
 

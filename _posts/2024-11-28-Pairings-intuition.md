@@ -1,16 +1,14 @@
 ---
 layout: post
 title:  "Pairings intuition"
-image: "assets/img/pairings_intuition.webp"
+image: "assets/img/entries_covers/aaa.png"
 author: Sergio Chouhy
+introduction: "There's a famous quote by John Von Neumann that says: 'In Mathematics you don't understand things. You just get used to them'. And that's true more often than one would like to admit. It is not uncommon in pure math to find objects defined in intricate ways that are very useful because of their properties.<br></br> Even outside the fields of Mathematics, this is true. Gravity, circuit analysis, etc. These are all things that are commonly understood through their properties rather than a deeply intuitive understanding of their underlying mechanisms. Sadly, pairings are no different in that sense. But that doesn't mean we can't try to improve our intuition."
 ---
-
-![Piezas_Crypto-07](/assets/img/piezas_crypto_07.png)
-
 
 
 ### Introduction
-There's a famous quote by John Von Neumann that says: "In Mathematics you don't understand things. You just get used to them". And that's true more often than one would like to admit. It is not uncommon in pure math to find objects defined in intricate ways that are very useful because of their properties. Even outside the fields of Mathematics, this is true. Gravity, [bike riding](https://www.youtube.com/watch?v=9cNmUNHSBac), circuit analysis, etc. These are all things that are commonly understood through their properties rather than a deeply intuitive understanding of their underlying mechanisms. Sadly, pairings are no different in that sense. But that doesn't mean we can't try to improve our intuition. The purpose of this short post is to give an analogy with other, more familiar, objects and operations that have the same properties than pairings. Even though this won't explain the intuition behind the definition of pairings in elliptic curves, having such an analogy and mental model may help to understand its use cases and its limitations.
+The purpose of this short post is to give an analogy with other, more familiar, objects and operations that have the same properties than pairings. Even though this won't explain the intuition behind the definition of pairings in elliptic curves, having such an analogy and mental model may help to understand its use cases and its limitations.
 
 ### Recap
 Let's quickly recap what an elliptic curve point is. One way to define an elliptic curve over a field $\mathbb{F}$ is as the set of pairs $(x,y)$ of elements of $\mathbb{F}$ such that $y^2 = x^3 + ax + b$. Here $a$ and $b$ are fixed and are part of the definition of the elliptic curve. For example, the curve [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) used for digital signatures in Bitcoin and Ethereum is the set of solutions $(x, y)$ to the equation $y^2 = x^3 + 7$, with $x$ and $y$ being elements of $\mathbb{F}_p$ for a particular 256-bit long prime.
