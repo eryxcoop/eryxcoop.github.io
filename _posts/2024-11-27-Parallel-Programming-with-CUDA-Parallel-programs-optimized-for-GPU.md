@@ -3,7 +3,8 @@ layout: post
 title:  "Parallel Programming with CUDA"
 image: "assets/img/entries_covers/parallel_programming.png"
 author: Julian Arnesino
-introduction: "In this article, we will talk about GPU parallelization with CUDA.
+introduction: "
+In this article, we will talk about GPU parallelization with CUDA.
 Firstly, we introduce concepts and uses of the architecture.<br></br>
 We then present an algorithm for summing elements in an array, to then optimize it with CUDA using many different approaches.<br></br>
 Finally, we compare all optimizations, summarize the topics, and conclude that learning some CUDA is worth the effort."

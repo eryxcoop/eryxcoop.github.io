@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "My path through FHE"
-image: "assets/img/entries_covers/path_through_fhe.png"
+image: "assets/img/entries_covers/path.png"
 author: Bruno Weisz
-introduction: "When we hear the term 'programmable cryptography' we often think about Zero Knowledge Proofs (ZK) alone. Still, sometimes we forget about other areas like Multi-Party Computation (MPC) or Fully Homomorphic Encryption (FHE). <br></br> I recently started learning about FHE and wanted to give an overview, not about the subjects targeted by FHE (I will write another post about that) but about my path and all the resources that guided me throughout the process."
+introduction: "When we hear the term 'programmable cryptography' we often think about Zero Knowledge Proofs (ZK) alone. Still, sometimes we forget about other areas like Multi-Party Computation (MPC) or Fully Homomorphic Encryption (FHE). <br></br> 
+I recently started learning about FHE and wanted to give an overview, not about the subjects targeted by FHE (I will write another post about that) but about my path and all the resources that guided me throughout the process."
 ---
 
 ### Introduction

@@ -3,7 +3,8 @@ layout: post
 title:  "The Power of GPU Parallelization (Applied to Cryptography Primitives)"
 image: "assets/img/entries_covers/power_of_gpu.png"
 author: Julian Arnesino
-introduction: "We discuss the basics of GPU parallelization and how it's used in applied cryptography.
+introduction: "
+We discuss the basics of GPU parallelization and how it's used in applied cryptography.
 Then, we describe a case study, which helps us see how a real algorithm is adapted for its parallelization.
 <br></br>Finally, we compare results, concluding with a successful application of GPU parallelization."
 ---
@@ -40,6 +41,7 @@ There are several factors to consider when programming for GPUs.
 
 Now, the sudden rise in practical applications for cryptography theory concepts in recent years caused some to research and develop specialized hardware.
 As of the writing of this article, the research of zero-knowledge and cryptography hardware resulted in and is focused on FPGAs and ASICs.
+
 
 ## Case Study
 

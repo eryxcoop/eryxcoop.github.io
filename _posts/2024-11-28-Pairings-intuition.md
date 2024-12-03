@@ -3,7 +3,9 @@ layout: post
 title:  "Pairings intuition"
 image: "assets/img/entries_covers/pairings_intuition.png"
 author: Sergio Chouhy
-introduction: "There's a famous quote by John Von Neumann that says: 'In Mathematics you don't understand things. You just get used to them'. And that's true more often than one would like to admit. It is not uncommon in pure math to find objects defined in intricate ways that are very useful because of their properties.<br></br> Even outside the fields of Mathematics, this is true. Gravity, circuit analysis, etc. These are all things that are commonly understood through their properties rather than a deeply intuitive understanding of their underlying mechanisms. Sadly, pairings are no different in that sense. But that doesn't mean we can't try to improve our intuition."
+introduction: "
+There's a famous quote by John Von Neumann that says: 'In Mathematics you don't understand things. You just get used to them'. And that's true more often than one would like to admit. It is not uncommon in pure math to find objects defined in intricate ways that are very useful because of their properties.<br></br> 
+Even outside the fields of Mathematics, this is true. Gravity, circuit analysis, etc. These are all things that are commonly understood through their properties rather than a deeply intuitive understanding of their underlying mechanisms. Sadly, pairings are no different in that sense. But that doesn't mean we can't try to improve our intuition."
 ---
 
 
