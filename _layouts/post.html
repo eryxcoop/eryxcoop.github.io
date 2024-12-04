@@ -2,38 +2,64 @@
 layout: default_eryx
 ---
 
-<link rel="stylesheet" href="{{ "/assets/styles/post.css" | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/styles/post.css' | relative_url }}">
 
 <!-- color 220844 de eryx -->
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-metadata">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-
-      <div class="intro-container">
-        <p style="line-height: 1.75;">
-          {{page.introduction}}
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-metadata">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                                                                                        itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}
         </p>
-        <img class="post-image" src="{{ media }}/{{ page.image }}" alt="Image not available">
-      </div>
-  </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+        <div class="intro-container">
+            <p style="line-height: 1.75;">
+                {{page.introduction}}
+            </p>
+            <img class="post-image" src="{{ media }}/{{ page.image }}" alt="Image not available">
+        </div>
+    </header>
 
-  {%- if site.disqus.shortname -%}
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+        <div class="media-btns">
+            <button class="media-btn" onclick="copyActualUrlToClipboard()">
+                <img src="/assets/icons/copy.svg" alt="Copy URL">
+            </button>
+            <a href="https://www.linkedin.com/feed/?shareActive=true&text=This is my text! https://ogp.me/ %23NewPost"
+               target="_blank" class="media-btn linkedin-btn">
+                <img src="/assets/icons/linkedin.svg" alt="Share on LinkedIn">
+            </a>
+        </div>
+    </div>
+
+    {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
+<script>
+  function copyActualUrlToClipboard() {
+    let url = document.querySelector('.u-url').href;
+    let tempInput = document.createElement('input');
+    tempInput.value = url;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+  }
+
+
+  document.querySelector('.linkedin-btn').href = `https://www.linkedin.com/feed/?shareActive=true&text=${document.querySelector('.u-url').href} %23Eryx`;
+</script>
