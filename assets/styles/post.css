@@ -84,6 +84,12 @@ p {
     align-items: center;
 }
 
+.media-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .media-btn:hover {
     background: #f0f7ff;
     border: solid 1px #4c8aff;
@@ -94,6 +100,10 @@ p {
 }
 
 .linkedin-btn {
+    width: 15px;
+}
+
+.twitter-btn {
     width: 15px;
 }
 
