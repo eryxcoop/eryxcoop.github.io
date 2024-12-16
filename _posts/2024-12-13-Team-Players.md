@@ -3,135 +3,81 @@ layout: post
 title:  "Team Players"
 image: "assets/img/entries_covers/team_players.png"
 author: Agustina Claramut, Julian Arnesino
-introduction: "In this article, we present some basics of Eryx's organizational model and values.
-We talk about some of the benefits of worker cooperatives through our own experience, and how we came to be one."
+introduction: "In this article, we present some basics of Eryx's organizational model and values. We discuss the benefits of worker cooperatives based on our own experience and how we came to adopt this model."
 ---
 
 ## Who are we?
 
-We are Eryx. A workers cooperative from Argentina.
-We do tailor-made software, cryptography, and computer vision.
+We are Eryx, a workers' cooperative from Argentina.  
+We specialize in tailor-made software, cryptography, and computer vision.
 
-## Traditional organization models
+## Traditional organizational models
 
-We'd like you to know about a different organizational model.
-One that has much more to do with cooperating than competing.
-For that, we first need you to think about what we already know.
-What ways for people to work do we know to be mainly implemented?
-Most answers converge to one of the two following traditional options.
+We’d like to introduce you to a different organizational model — one based more on cooperation than competition.  
+But first, let’s reflect on what we already know: What are the main ways people typically work?  
+Most answers converge on one of two traditional options:
 1. Employer-employee relationships.
-2. Freelance working.
+2. Freelancing.
 
+### Employer-Employee Relationships
 
-The first one, involving employees, is the most widespread.
-Companies that work this way consist of hierarchies, where higher-ups delegate work via orders.
-Employees are told what to do and when to do it.
-Sometimes even how to do it.
-Some people decide and some others only execute.
-Employees receive a somewhat fixed compensation in exchange for their work, and owners usually keep the company's profits.
-Most banks and supermarkets are organized this way.
+This is the most widespread model. Companies operating this way are hierarchical, with higher-ups delegating tasks through orders.  
+Employees are told what to do, when to do it, and sometimes even how to do it. Decision-making is concentrated at the top, while employees focus on execution.  
+Compensation is usually fixed, while company profits remain with the owners. Most banks and supermarkets follow this model.
 
-The other one, freelancing, is chosen by people who want to work independently.
-Entrepreneurs who work like this decide to begin their businesses based on their experience with a hobby that can bring them money.
-There are even some professionals who offer their services as private workers.
-They organize their work and keep their profits.
-Some psychologists and artisans, for example, work this way.
+### Freelancing
 
-But what if we don't want our work to be driven by these structures?
-What if we don't want to be neither freelancers nor employees?
-We'll start exploring an alternative by telling our story.
+Freelancing is often chosen by those who want independence. Entrepreneurs in this model start businesses based on a profitable skill or hobby.  
+Some professionals, such as psychologists and artisans, also offer services independently. Freelancers organize their own work and retain all profits.
+
+But what if we don’t want to work within these structures?  
+What if we don’t want to be employees or freelancers?  
+Let’s explore an alternative by sharing our story.
 
 ## A story of an alternative
 
 ### Beginnings
 
-Two friends, and Computer Science students at the University of Buenos Aires, started programming together as an incursion into the software development industry.
-They started working from their own homes, with their computers.
-The first projects were small: a landing web for a small business, a simple system for a real estate company, and a similar one for a printing office.
-Their first clients were people and companies contacted via their friends and family.
-All this not only helped them apply what they studied at university but also taught them about management, sales, and finance.
-With the trust and friendship they built, they could work comfortably together, and this entrepreneurship started to expand little by little.
+Two friends and Computer Science students at the University of Buenos Aires started programming together to enter the software development industry.  
+They worked from home, using their own computers. Their early projects were small: a landing page for a small business, a system for a real estate company, and another for a print shop.  
+Clients came through personal connections. These projects helped them apply what they’d learned at university while also teaching them about management, sales, and finance.  
+Their trust and friendship allowed them to work comfortably, and their entrepreneurship gradually expanded.
 
-As time passes, their services have more demand.
-This time, not only from friends and family but also contacts generated via word of mouth.
-They realize that they now need more people.
-However, they don't want employees, and they don't want to be in a position of power.
-They want to add someone as a peer.
-An equal with influence in group decisions, in a context of equality and transparency.
-This is when they start contacting their friends from university.
-People with whom they share ideals, principles, and trust.
-They invite them to join and work collaboratively.
-Everyone chooses which projects the company takes, which technologies and frameworks to use, how to split the teams, and how to distribute the profit.
+As demand for their services grew, they realized they needed more people. However, they didn’t want employees or a traditional hierarchy. They wanted peers — equals who could share in decision-making within a transparent, egalitarian environment.  
+They reached out to trusted university friends who shared their principles. Together, they decided which projects to take, which technologies to use, how to form teams, and how to distribute profits.
 
-Growth didn't stop there, and since the house they were working in was too small for them now, they joined a coworking space.
-An office shared with other companies.
-The growing company size also implied they needed a structure to organize their work, their billing, and contemplate the horizontal fashion of the organization.
+The team continued to grow. When their home office became too small, they moved into a coworking space. Growth also brought the need for a structure to organize work, billing, and the horizontal nature of their organization.
 
+Their key principles emerged:
 1. No hierarchy. No bosses.
 2. Nobody works alone.
-3. Everyone participates in the decision process, democratically.
-4. They perceive themselves as a group.
-   They go on holidays together, gather as friends, get to know each other better, and start adopting a language with expressions that are the group's own.
-
-This group not only values and serves financial needs, but also cultural notions related to work, respect, and collaboration.
-The human part of the equation.
-For instance, the general well-being of all members.
-Respecting and making room for all initiatives and ideas.
-Making an impact in society.
-A contribution to the community.
+3. Everyone participates in decisions democratically.
+4. They value collective well-being, respect, and collaboration.
 
 ### The chosen organizational model
 
-But what kind of company represents these friends best?
-Without a hierarchy, they can't fit in an employer-employee relationship model.
-They also work together, so it does not comprise a freelancing scheme.
-They are a group with a democratic voice and vote.
-With natural and rotating leadership roles.
+The team searched for a legal structure that fit their values. Someone in their coworking space mentioned they were already functioning like a **cooperative**. But what does that mean?
 
-They were searching for a legal structure that served their purpose.
-That fit their needs.
-That's when someone from another company, in their coworking space, told them that they effectively functioned like a _cooperative_.
-But, what is that?
+A cooperative is defined as an _autonomous association of individuals who voluntarily unite to meet their shared economic, social, and cultural needs and aspirations through a jointly owned and democratically governed enterprise._  
+This aligned perfectly with their ideals.
 
-Well, by definition, it's _an autonomous association of individuals who voluntarily come together to address their shared economic, social, and cultural needs and aspirations through a jointly owned and democratically governed enterprise._
-This pretty much covers what we were talking about previously.
-Still, some members had certain doubts.
-They thought cooperatives were factories recovered by their employees.
-That potential clients would avoid working with a cooperative.
-That they weren't profitable.
-That they were a new and unknown phenomenon.
-They, however, decided this legal figure could be a useful tool, and chose to continue their research.
+Despite some initial doubts — such as concerns about profitability or client perceptions — they decided to explore further. They learned that cooperatives originated in 1844 England, when the Rochdale Pioneers organized to address food crises during the Industrial Revolution.  
+The Pioneers established principles that remain relevant today, such as:
 
-They found cooperatives originated in 1844 England when a group called the Rochdale Pioneers got together to face the food crisis brought on by the Industrial Revolution.
-What the Pioneers did was contribute to a common fund to buy products at a wholesale price, which was cheaper.
-This amounted to the birth of the first cooperative and, with it, the drafting of many principles still standing today, almost 200 years later.
+- **Voluntary and Open Membership**: No discrimination based on race, politics, religion, social status, or gender.
+- **Democratic Member Control**: A principle established even before universal suffrage!
+- **Member Economic Participation**: Members share profits.
+- **Autonomy and Independence**: Cooperatives remain self-governed.
+- **Education, Training, and Information**: Continuous learning is essential.
+- **Cooperation Among Cooperatives**: Collaboration replaces competition.
+- **Concern for Community and Environment**: Cooperatives aim for sustainable development.
 
-- **Voluntary and Open Membership**: Without discrimination based on race, politics, religion, social status, or gender.
-- **Democratic Member Control**: Imagine — this principle existed even before women had the right to vote!
-- **Member Economic Participation**: In simple terms, members share the profits.
-- **Autonomy and Independence**: Cooperatives maintain their freedom and self-governance.
-- **Education, Training, and Information**: Continuous learning and informed members are key to success.
-- **Cooperation Among Cooperatives**: There’s no competition here — the solution is collective, and everyone wins.
-- **Concern for Community and Environment**: Cooperatives work towards the sustainable development of their communities and care for the planet.
-
-So, cooperatives are not new, can be profitable and there are many big, successful companies with that scheme.
-About 12% of the world's population is in a cooperative.
-But there are also different types according to the company's goals.
-One of them is the _worker cooperative_, intending to provide work for its associates.
-
-They founded the National Institute of Cooperativism and Social Economy (INAES, in Spanish).
-Argentina's state institution in charge of the cooperatives in the city of Buenos Aires.
-There, they presented the documentation needed to start working as a cooperative.
-They hired professionals like lawyers and accountants for tasks that they didn't know about or were out of their comfort zone.
-In Argentina, there's also the presence of three legal figures in a cooperative: President, Secretary, and Treasurer.
-In their case, those charges were treated as nothing but a formality, and their responsibilities were distributed among all members.
-With legal backing for the organization model, the company kept growing even more.
+With this framework in mind, the team officially registered their company as a cooperative with the National Institute of Cooperativism and Social Economy (INAES) in Buenos Aires.  
+They divided formal roles (e.g., President, Secretary, Treasurer) but distributed responsibilities among all members.
 
 ### The organizational model in practice
 
-They moved to their own office.
-They started having so much to do that not all of them could handle every single task of the company.
-So then came the decision to introduce "areas" or departments.
+The cooperative continued to grow, moving into its own office and introducing specialized departments:
 
 - Accounting and Administration
 - Communication
@@ -141,42 +87,18 @@ So then came the decision to introduce "areas" or departments.
 - Design
 - Labs
 
-Given that individual initiatives are welcome and encouraged in cooperatives, the Labs department, akin to a Research and Development department, was created from the aspirations of a member of the company.
-With Labs, they sent a box to space and programmed an app to teach Math to little kids.
+Labs, for instance, was created by a member passionate about research and development. It led to projects like sending a box to space and developing an educational math app for children.
 
-In the spirit of a horizontal, democratic, and transparent organization, some spaces for intra-department communication were created.
-These were in the form of weekly and monthly "rituals" of some sort.
-To tell other associates about the state of each project and department.
+To ensure transparency and collaboration, the team established regular meetings to share project updates and departmental progress.
 
-But who made the decisions until now?
-Who are these "they" we're so frequently mentioning?
-In a cooperative, decisions are made democratically.
-However, not everyone needs to participate in every decision.
-There are two kinds of decisions identified:
-
-- **Low impact decisions**, which are easily reversible, have little effect on how the company works and a low financial cost.
-  These decisions can be left in charge of people in a specific department, or using a quick _thermometer_, efficiently gauging opinions.
-  There's also something called _advice process_, which consists of consulting with specific people first, before escalating the decision.
-  For instance, buying a printer that would be seldom used.
-- **High impact decisions**, which can have a lasting effect on the company's performance, can't be reversed or have a high financial cost.
-  Formal proposals and voting are the mechanisms chosen for these decisions.
-  For instance, adding a new member to the company or moving offices.
-
-Both types of decisions are taken on the basis of _consent_.
-This means the choice is made if there isn't a strong disagreement.
-
-However, the company didn't walk all this road by itself.
-Some of it was with the help of the Argentine Federation of Worker Cooperatives in Technology, Innovation, and Knowledge (FACTTIC, in Spanish).
-It's made up of more than 40 cooperatives from all over the country, and it serves the principle saying that _cooperatives cooperate between them instead of competing_.
+Decision-making is democratic, with two types identified:
+- **Low-impact decisions**: Easily reversible and low-cost, handled by specific departments or quick consensus.
+- **High-impact decisions**: Long-term, costly, or high-stakes decisions require formal proposals and voting.
 
 ## Final notes
 
-This group, our group, is named **Eryx**.
-We are a worker cooperative with more than 35 members.
-A group of professionals consisting of PhDs, university teachers, and other fields outside software development.
-We have more than 13 years of history, with an extremely low rotation of members, which is unheard of in the technology sector.
-This road brought us more than 50 clients all over the world, along with a diverse collection of projects in several fields and industries.
-Right now, we are focusing on Cryptography, Computer Vision, and Education.
-But, above all, our company is still horizontal and transparent.
+Our group, Eryx, is now a cooperative of over 35 members, including PhDs, university teachers, and professionals from various fields.  
+We’ve worked with over 50 clients worldwide, focusing on Cryptography, Computer Vision, and Education.  
+Above all, we remain horizontal and transparent.
 
-So remember: if you're thinking of starting your own company, a cooperative is a great option!
+If you’re considering starting your own company, remember: a cooperative is a fantastic option!
