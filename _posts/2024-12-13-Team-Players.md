@@ -6,11 +6,11 @@ author: Eryx, Agustina Claramut, Julian Arnesino
 introduction: "In this article, we present some basics of Eryx's organizational model and values. We discuss the benefits of worker cooperatives based on our own experience and how we came to adopt this model."
 ---
 
-## Who are we?
+### Who are we?
 We are Eryx, a technology cooperative from Argentina.
 We specialize in tailor-made software, cryptography and computer vision.
 
-## Traditional organizational models
+### Traditional organizational models
 
 What are the main ways people typically work?
 Most answers converge on one of two traditional options:
@@ -18,12 +18,8 @@ Most answers converge on one of two traditional options:
 1. Employer-employee relationships.
 2. Freelancing.
 
-### Employer-Employee Relationships
-
-This is the most widespread model.
+Employer-Employee relationships are the most widespread model.
 Companies operating this way are hierarchical, with higher-ups delegating tasks through orders.
-
-### Freelancing
 
 Freelancing is often chosen by those who want independence.
 Entrepreneurs in this model start businesses based on a profitable skill or hobby.
@@ -31,9 +27,7 @@ But what if we don't want to work within these structures?
 What if we don't want to be employees or freelancers?
 Let's explore an alternative by sharing our story.
 
-## A story of an alternative
-
-### Beginnings
+### A story of an alternative
 
 Agustin and Lucho met at the University of Buenos Aires while studying computer science.
 To break into the software development industry, they started working together, programming for small entrepreneurs.
@@ -42,6 +36,7 @@ Clients came through personal connections.
 These projects helped them apply what they'd learned at university while also teaching them about management, sales, and finance.
 Their trust and friendship allowed them to work comfortably, and their entrepreneurship gradually expanded.
 As demand for their services grew, they realized they needed more people.
+
 However, they didn't want employees or a traditional hierarchy.
 They wanted peers — equals who could share in decision-making within a transparent, egalitarian environment.
 They reached out to trusted university friends who shared their principles.
@@ -98,7 +93,7 @@ Labs, for instance, was created by a member passionate about research and develo
 It led to projects like sending a box to space and developing an educational math app for children.
 To ensure transparency and collaboration, the team established regular meetings to share project updates and departmental progress.
 
-## Final notes
+### Final notes
 
 Our group, Eryx, is now a cooperative of over 36 members, including PhDs, university teachers, and professionals from various fields.
 We've worked with over 50 clients worldwide, focusing on Cryptography, Computer Vision, and Education.
