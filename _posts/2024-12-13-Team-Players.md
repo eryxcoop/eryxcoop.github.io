@@ -54,11 +54,28 @@ Their key principles emerged:
 3. Everyone participates in decisions democratically.
 4. They value collective well-being, respect, and collaboration.
 
+<p style="text-align: center">
+
+<img src="/assets/img/team-players/team-players-1-growing.png" alt="growing" width=400 />
+
+<img src="/assets/img/team-players/team-players-2-growing.png" alt="growing" width=400 />
+
+<img src="/assets/img/team-players/team-players-3-growing.png" alt="growing" width=400 />
+
+</p>
+
 ### The chosen organizational model
 
 The team searched for a legal structure that fit their values.
 Someone mentioned they were already functioning like a **cooperative**.
 But what does that mean?
+
+<p style="text-align: center">
+
+<img src="/assets/img/team-players/team-players-4-cooperative.png" alt="growing" width=400 />
+
+</p>
+
 A cooperative is defined as an _autonomous association of individuals who voluntarily unite to meet their shared economic, social, and cultural needs and aspirations through a jointly owned and democratically governed enterprise_.
 This aligned perfectly with their ideals.
 Despite some initial doubts — such as concerns about profitability or client perceptions — they decided to explore further.
@@ -86,4 +103,10 @@ To ensure transparency and collaboration, the team established regular meetings 
 Our group, Eryx, is now a cooperative of over 36 members, including PhDs, university teachers, and professionals from various fields.
 We've worked with over 50 clients worldwide, focusing on Cryptography, Computer Vision, and Education.
 Above all, we remain horizontal and transparent.
-We have been working this way for 13 years, and we are incredibly proud of what we have built together. 
+We have been working this way for 13 years, and we are incredibly proud of what we have built together.
+
+<p style="text-align: center">
+
+<img src="/assets/img/team-players/team-players-5-eryx.jpg" alt="growing" width=400 />
+
+</p>
