@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Team Players"
+title:  "Team Players: A Story about Eryx and Cooperativism"
 image: "assets/img/entries_covers/team_players.png"
 author: Eryx, Agustina Claramut, Julian Arnesino
 introduction: "In this article, we present some basics of Eryx's organizational model and values. We discuss the benefits of worker cooperatives based on our own experience and how we came to adopt this model."
