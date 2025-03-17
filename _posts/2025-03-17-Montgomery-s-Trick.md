@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Montgomery's Trick"
+title:  "Montgomery's Trick for Batch Galois Field Inversion"
 image: "assets/img/entries_covers/team_players.png"
 author: Julian Arnesino
 introduction: "We present an efficient way of inverting many field elements at once."
 ---
 
-# Montgomery's trick
+# Montgomery's Trick
 
 *Note: This is extracted from [our article on the power of GPU parallelization](https://blog.eryx.co/2024/11/27/The-Power-of-GPU-Parallelization-Applied-to-Cryptography-Primitives.html).*
 
