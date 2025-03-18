@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Montgomery's Trick for Batch Galois Field Inversion"
-image: "assets/img/entries_covers/team_players.png"
+image: "assets/img/entries_covers/montgomerys_trick.png"
 author: Julian Arnesino
 introduction: "We present an efficient way of inverting many field elements at once."
 ---
