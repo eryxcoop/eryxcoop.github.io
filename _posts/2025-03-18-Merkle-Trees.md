@@ -27,7 +27,7 @@ The leaves of the tree are created by hashing each individual element in the lis
 
 <p style="text-align: center">
 
-<img src="/assets/img/merkle-trees/merkle-tree-construction.gif" alt="construction" width=700/>
+<img src="/assets/img/merkle-trees/merkle-tree-construction.gif" alt="construction"/>
 
 </p>
 
@@ -49,7 +49,7 @@ The other hashes in the path are intermediate hashes in the tree, which are nece
 
 <p style="text-align: center">
 
-<img src="/assets/img/merkle-trees/merkle-tree-authentication.gif" alt="construction" width=700/>
+<img src="/assets/img/merkle-trees/merkle-tree-authentication.gif" alt="construction"/>
 
 </p>
 
