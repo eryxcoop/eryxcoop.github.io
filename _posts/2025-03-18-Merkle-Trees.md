@@ -25,13 +25,14 @@ The leaves of the tree are created by hashing each individual element in the lis
 
 ### Example
 
+Consider the following list: `[d1, d2, d3, d4]`.
+The `+` operation denotes the concatenation of hashes.
+
 <p style="text-align: center">
 
 <img src="/assets/img/merkle-trees/merkle-tree-construction.gif" alt="construction"/>
 
 </p>
-
-In the example shown above, the `+` operation denotes the concatenation of hashes.
 
 ## Authentication
 
@@ -47,15 +48,16 @@ The other hashes in the path are intermediate hashes in the tree, which are nece
 
 ### Example
 
+Consider the same list: `[d1, d2, d3, d4]`.
+To prove that `d2` belongs to the list, we only need to provide `d2` and its authentication path: `[h(d1), h( h(d3) + h(d4) )]`.
+With this information, anyone can calculate `h(d3)` using the public hash function and verify that the concatenations along the authentication path result in the public root hash.
+The only way for someone to provide an element `x` that builds up to the root hash is if that `x` is actually part of the list and located in the exact position specified by the authentication path.
+
 <p style="text-align: center">
 
 <img src="/assets/img/merkle-trees/merkle-tree-authentication.gif" alt="construction"/>
 
 </p>
-
-In the example above, to prove that `d2` belongs to the list, we only need to provide `d2` and its authentication path: `[h(d1), h( h(d3) + h(d4) )]`.
-With this information, anyone can calculate `h(d3)` using the public hash function and verify that the concatenations along the authentication path result in the public root hash.
-The only way for someone to provide an element `x` that builds up to the root hash is if that `x` is actually part of the list and located in the exact position specified by the authentication path.
 
 ## Main applications
 
