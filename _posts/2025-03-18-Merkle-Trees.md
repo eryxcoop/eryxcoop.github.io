@@ -23,7 +23,7 @@ The leaves of the tree are created by hashing each individual element in the lis
 2. **Intermediate nodes:** Next, create the parent nodes by hashing the concatenation of the hashes of the child nodes. This process continues recursively, building higher-level nodes until you reach the root.
 3. **Root:** The last remaining node is the root of the tree, which serves as a cryptographic fingerprint of the entire data set.
 
-### Example
+#### Example
 
 Consider the following list: `[d1, d2, d3, d4]`.
 The `+` operation denotes the concatenation of hashes.
@@ -46,7 +46,7 @@ In each step, we record the hash concatenation that leads to each parent node, c
 Note that the recorded hash concatenations include only the hash corresponding to the element we are authenticating.
 The other hashes in the path are intermediate hashes in the tree, which are necessary for the verification but do not correspond to the elements themselves.
 
-### Example
+#### Example
 
 Consider the same list: `[d1, d2, d3, d4]`.
 To prove that `d2` belongs to the list, we only need to provide `d2` and its authentication path: `[h(d1), h( h(d3) + h(d4) )]`.
