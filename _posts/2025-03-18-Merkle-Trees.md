@@ -61,17 +61,17 @@ The only way for someone to provide an element `x` that builds up to the root ha
 
 ## Main applications
 
-### Data integrity and authentication
+#### Data integrity and authentication
 
 - Preventing some of the risks present in peer-to-peer networks, like ill-intentioned parties altering information, or even simple data loss.
 - Allowing for the distribution of information sources: receiving the highest part of the tree from a trusted source, and subsequent data from a closer, faster but untrusted source while also making sure that data was not altered.
 - Commitment verification and secret-sharing in multi-party computation systems.
 
-### Efficient data synchronization
+#### Efficient data synchronization
 
 - Identifying which blocks of data should be updated in CDNs and distributed databases, and efficiently updating the root of the tree using the unmodified subtrees. 
 
-### Zero-knowledge proofs
+#### Zero-knowledge proofs
 
 - Proving that a specific element is included in a private set, without revealing the whole set to the verifier.
 - Proving that a specific element is excluded from a private set, without revealing the element to the verifier, using sparse Merkle trees.
