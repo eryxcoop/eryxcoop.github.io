@@ -55,7 +55,7 @@ The other hashes in the path are intermediate hashes in the tree, which are nece
 
 In the example above, to prove that `d2` belongs to the list, we only need to provide `d2` and its authentication path: `[h(d1), h( h(d3) + h(d4) )]`.
 With this information, anyone can calculate `h(d3)` using the public hash function and verify that the concatenations along the authentication path result in the public root hash.
-Given that the whole merkle tree is public (with the leaves as hashes, not the actual data), the only way for someone to provide an element `x` that satisfies that condition is if that `x` is actually part of the list and located in the exact position specified by the authentication path.
+The only way for someone to provide an element `x` that builds up to the root hash is if that `x` is actually part of the list and located in the exact position specified by the authentication path.
 
 ## Main applications
 
