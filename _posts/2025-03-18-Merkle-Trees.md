@@ -96,7 +96,7 @@ Through this exchange, Alice ensures that Bob can prove his credit score to Char
 
 ## Concrete applications
 
-- A good explanation on the use of Merkle trees to make optimized build systems is written in [this article on _lwm.net_](https://lwn.net/Articles/821367/).
-- NixOS is a widely-used operating system that implements Merkle trees for boot time integrity checks, as mentioned [here](https://discourse.nixos.org/t/boot-time-integrity-checks-for-the-nix-store/36793).
-- Many cryptocurrency exchange platforms base their Proof of Reserves mechanisms in Merkle trees (for proving their funds cover their user's assets). Binance has [their own article](https://www.binance.com/en/proof-of-reserves) explaining it.
-- The Early Detection Framework was proposed in [this paper](https://www.researchgate.net/publication/380542025_Enhancing_blockchain_scalability_and_security_the_early_fraud_detection_EFD_framework_for_optimistic_rollups) by researchers aiming to help optimistic rollups reduce costs in verification time.
+- A good explanation of the use of Merkle trees to optimize build systems is provided in [this article on lwm.net](https://lwn.net/Articles/821367/).
+- NixOS is a widely used operating system that implements Merkle trees for boot-time integrity checks, as mentioned [here](https://discourse.nixos.org/t/boot-time-integrity-checks-for-the-nix-store/36793).
+- Many cryptocurrency exchange platforms use Merkle trees as the foundation for their Proof of Reserves mechanisms, allowing them to prove that their funds cover users' assets. Binance has [their own article](https://www.binance.com/en/proof-of-reserves) explaining it.
+- The Early Detection Framework was proposed in [this paper](https://www.researchgate.net/publication/380542025_Enhancing_blockchain_scalability_and_security_the_early_fraud_detection_EFD_framework_for_optimistic_rollups) by researchers aiming to help optimistic rollups reduce verification costs and processing time.
