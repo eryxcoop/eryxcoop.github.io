@@ -60,7 +60,7 @@ The only way for someone to provide an element `x` that builds up to the root ha
 Take the root hash: `h( h( h(d1) + h(d2) ) + h( h(d3) + h(d4) ) )`, and the authentication path for `d2`: `[h(d1), h( h(d3) + h(d4) )]`.
 To authenticate `d2`, we calculate `h(d2)` with the public hash function and 
 
-#### Example: real life application
+#### Example: daily life use case
 
 Take Alice, Bob and Charlie, for instance.
 Alice is a credit agency that keeps people's credit score.
@@ -91,3 +91,10 @@ In this exchange, Alice does not need to reveal the whole credit score list to e
 
 - Proving that a specific element is included in a private set, without revealing the whole set to the verifier.
 - Proving that a specific element is excluded from a private set, without revealing the element to the verifier, using sparse Merkle trees.
+
+## Concrete applications
+
+- A good explanation on the use of Merkle trees to make optimized build systems is written in [this article on _lwm.net_](https://lwn.net/Articles/821367/).
+- NixOS is a widely-used operating system that implements Merkle trees for boot time integrity checks, as mentioned [here](https://discourse.nixos.org/t/boot-time-integrity-checks-for-the-nix-store/36793).
+- Many cryptocurrency exchange platforms base their Proof of Reserves mechanisms in Merkle trees (for proving their funds cover their user's assets). Binance has [their own article](https://www.binance.com/en/proof-of-reserves) explaining it.
+- The Early Detection Framework was proposed in [this paper](https://www.researchgate.net/publication/380542025_Enhancing_blockchain_scalability_and_security_the_early_fraud_detection_EFD_framework_for_optimistic_rollups) by researchers aiming to help optimistic rollups reduce costs in verification time.
