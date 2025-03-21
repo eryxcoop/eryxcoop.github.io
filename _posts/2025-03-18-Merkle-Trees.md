@@ -6,8 +6,6 @@ author: Julian Arnesino
 introduction: "We present the concept of a Merkle tree, a data structure that helps cryptographers ensure set integrity and also serves as a tool for zero-knowledge proofs involving sets."
 ---
 
-# Merkle Trees
-
 Trees are a widely used data structure in computer science.
 From them emerges the Merkle tree, a simple yet very useful mutation of the basic tree concept.
 Originally [developed by Ralph Merkle as a digital signature tool](https://www.ralphmerkle.com/papers/Certified1979.pdf) for ensuring data integrity and authentication, Merkle trees have become fundamental in cryptography and blockchain-related systems.
@@ -23,7 +21,7 @@ The leaves of the tree are created by hashing each individual element in the lis
 2. **Intermediate nodes:** Next, create the parent nodes by hashing the concatenation of the hashes of the child nodes. This process continues recursively, building higher-level nodes until you reach the root.
 3. **Root:** The last remaining node is the root of the tree, which serves as a cryptographic fingerprint of the entire data set.
 
-#### Example
+#### Example: how to build a Merkle tree
 
 Consider the following list: `[d1, d2, d3, d4]`.
 The `+` operation denotes the concatenation of hashes.
@@ -46,11 +44,11 @@ In each step, we record the hash concatenation that leads to each parent node, c
 Note that the recorded hash concatenations include only the hash corresponding to the element we are authenticating.
 The other hashes in the path are intermediate hashes in the tree, which are necessary for the verification but do not correspond to the elements themselves.
 
-#### Example
+#### Example: how to obtain an authentication path
 
 Consider the same list: `[d1, d2, d3, d4]`.
 To prove that `d2` belongs to the list, we only need to provide `d2` and its authentication path: `[h(d1), h( h(d3) + h(d4) )]`.
-With this information, anyone can calculate `h(d3)` using the public hash function and verify that the concatenations along the authentication path result in the public root hash.
+With this information, anyone can calculate `h(d2)` using the public hash function and verify that the concatenations along the authentication path result in the public root hash.
 The only way for someone to provide an element `x` that builds up to the root hash is if that `x` is actually part of the list and located in the exact position specified by the authentication path.
 
 <p style="text-align: center">
@@ -58,6 +56,24 @@ The only way for someone to provide an element `x` that builds up to the root ha
 <img src="/assets/img/merkle-trees/merkle-tree-authentication.gif" alt="construction"/>
 
 </p>
+
+Take the root hash: `h( h( h(d1) + h(d2) ) + h( h(d3) + h(d4) ) )`, and the authentication path for `d2`: `[h(d1), h( h(d3) + h(d4) )]`.
+To authenticate `d2`, we calculate `h(d2)` with the public hash function and 
+
+#### Example: real life application
+
+Take Alice, Bob and Charlie, for instance.
+Alice is a credit agency that keeps people's credit score.
+Bob is a client of the Charlie bank.
+The Charlie bank needs Bob's credit score because Bob is asking them for a loan.
+
+1. Alice builds a Merkle tree from the list and publishes the _root hash_ every week, for everyone to see, without revealing information on people's scores.
+2. Bob asks Alice for his credit score, since he is the only one that can query it.
+3. Alice provides both Bob's credit score and the _authentication path_ as proof that it is the one that corresponds to the published _root hash_.
+4. Bob gives Charlie his score and the _authentication path_.
+5. Charlie checks that the score and _authentication path_ actually amount to the public root hash, convincing himself of the score being true.
+
+In this exchange, Alice does not need to reveal the whole credit score list to everyone to help Bob prove the Charlie bank that his is real.
 
 ## Main applications
 
