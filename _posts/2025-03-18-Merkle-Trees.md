@@ -62,18 +62,20 @@ To authenticate `d2`, we calculate `h(d2)` with the public hash function and
 
 #### Example: daily life use case
 
-Take Alice, Bob and Charlie, for instance.
-Alice is a credit agency that keeps people's credit score.
-Bob is a client of the Charlie bank.
-The Charlie bank needs Bob's credit score because Bob is asking them for a loan.
+Take Alice, Bob, and Charlie, for instance.
+Alice is a credit agency that maintains people's credit scores.
+Bob is a client of Charlie Bank and is applying for a loan.
+To process the loan, Charlie Bank needs to verify Bob's credit score.
 
-1. Alice builds a Merkle tree from the list and publishes the _root hash_ every week, for everyone to see, without revealing information on people's scores.
-2. Bob asks Alice for his credit score, since he is the only one that can query it.
-3. Alice provides both Bob's credit score and the _authentication path_ as proof that it is the one that corresponds to the published _root hash_.
-4. Bob gives Charlie his score and the _authentication path_.
-5. Charlie checks that the score and _authentication path_ actually amount to the public root hash, convincing himself of the score being true.
+1. To ensure privacy, Alice constructs a Merkle tree from the list of credit scores and publishes only the root hash every week.
+   This allows verification without revealing individual scores.
+2. Bob, the rightful owner of his credit score, requests it from Alice.
+3. Alice provides Bob with both his credit score and the corresponding authentication path.
+   This path serves as proof that his score is included in the Merkle tree that corresponds to the publicly available root hash.
+4. Bob then submits his credit score and the authentication path to Charlie Bank.
+5. Charlie verifies that the provided authentication path correctly reconstructs the public root hash, confirming that Bob’s credit score is authentic and unchanged.
 
-In this exchange, Alice does not need to reveal the whole credit score list to everyone to help Bob prove the Charlie bank that his is real.
+Through this exchange, Alice ensures that Bob can prove his credit score to Charlie Bank without exposing the entire credit score list to the public.
 
 ## Main applications
 
