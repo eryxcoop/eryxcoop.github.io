@@ -58,7 +58,7 @@ The only way for someone to provide an element `x` that builds up to the root ha
 </p>
 
 Take the root hash: `h( h( h(d1) + h(d2) ) + h( h(d3) + h(d4) ) )`, and the authentication path for `d2`: `[h(d1), h( h(d3) + h(d4) )]`.
-To authenticate `d2`, we calculate `h(d2)` with the public hash function and 
+To authenticate `d2`, we calculate `h(d2)` with the public hash function and build the Merkle tree root hash from that using the authentication path.
 
 #### Example: daily life use case
 
