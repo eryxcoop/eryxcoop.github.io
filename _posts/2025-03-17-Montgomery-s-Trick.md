@@ -105,7 +105,7 @@ This idea would now be sequentially repeated for the remaining elements in the a
 |  $a_4$  |  $\beta_4^{-1} \leftarrow eea(\beta_4)$  | $a_4^{-1} = \beta_4^{-1} \times \beta_3$ |
 |  $a_3$  | $\beta_3^{-1} = \beta_4^{-1} \times a_4$ | $a_3^{-1} = \beta_3^{-1} \times \beta_2$ |
 |  $a_2$  | $\beta_2^{-1} = \beta_3^{-1} \times a_3$ | $a_2^{-1} = \beta_2^{-1} \times \beta_1$ |
-|  $a_2$  | $\beta_1^{-1} = \beta_2^{-1} \times a_2$ |       $a_1^{-1} = \beta_1^{-1}$          |
+|  $a_1$  | $\beta_1^{-1} = \beta_2^{-1} \times a_2$ |       $a_1^{-1} = \beta_1^{-1}$          |
 
 Which leaves us with every element's inversion.
 
