@@ -6,21 +6,13 @@ author: Eryx Team
 introduction: "In the last years, Zero-Knowledge proofs have been revolutionizing how people think about blockchains. From L2s to simple applications, these protocols bring a layer of privacy and delegation to a widely used stack of technologies. Today, we'll talk about how we pretend to further include Cardano in this growing movement."
 ---
 
-# **Bringing Zero-Knowledge Capabilities to Cardano**
+# Bringing Zero-Knowledge Capabilities to Cardano
 
-At Eryx, we believe zero-knowledge technology is becoming a foundational layer for the future of blockchain — and Cardano should be part of that future.
-
-Today, building ZK applications on Cardano is still harder than it should be. Experienced ZK teams often face missing infrastructure that must be built from scratch. And for developers who are not ZK specialists, the barrier is much higher: the tools are complex, the workflows are unfamiliar, and there are not enough reusable components to make ZK feel accessible.
+At Eryx, we believe zero-knowledge technology is becoming a foundational layer for the future of blockchain and Cardano should be part of that future. Today, building ZK applications on Cardano is still harder than it should be. Experienced ZK teams often face missing infrastructure that must be built from scratch. And for developers who are not ZK specialists, the barrier is much higher: the tools are complex, the workflows are unfamiliar, and there are not enough reusable components to make ZK feel accessible.
 
 But it should not be that way.
 
-If Cardano wants to support private voting, anonymous credentials, ZK-based DeFi, verifiable off-chain computation, and other next-generation applications, builders need reusable open-source tools they can rely on.
-
-ZK should become accessible infrastructure: powerful enough for cryptographers, but simple enough for Cardano builders to use.
-
-That is what we want to help build for Cardano. Open, practical ZK capabilities that lower the barrier for developers and make it possible for better, more private, and more useful applications to reach real users.
-
-## **Key infrastructure**
+If Cardano wants to support private voting, anonymous credentials, ZK-based DeFi, verifiable off-chain computation, and other next-generation applications, builders need reusable open-source tools they can rely on. ZK should become accessible infrastructure: powerful enough for cryptographers, but simple enough for Cardano builders to use. That is what we want to help build for Cardano. Open, practical ZK capabilities that lower the barrier for developers and make it possible for better, more private, and more useful applications to reach real users.
 
 The proposal includes four open-source components:
 
@@ -50,7 +42,7 @@ Bringing Semaphore to Cardano would make similar privacy-preserving patterns ava
 
 We will adapt Semaphore to Cardano and implement the Aiken validators needed so developers can use it as a reusable privacy building block.
 
-## **Unlock new capabilities**
+## Unlock new capabilities
 
 With these components, Cardano developers will be able to build applications that are currently difficult or impossible to implement: private governance, ZK-based DeFi, anonymous identity systems, verifiable off-chain computation, and privacy-preserving user flows.
 
@@ -58,6 +50,6 @@ For users, this means more privacy and better applications.
 For developers, it means better tools and fewer barriers.  
 For Cardano, it means a stronger foundation for the next generation of decentralized applications.
 
-## **The future**
+## The future
 
 The goal is simple: make zero-knowledge technology practical, reusable, and accessible for the Cardano ecosystem. ZK should not remain a distant research promise — it should become part of the everyday toolkit for building on Cardano.
